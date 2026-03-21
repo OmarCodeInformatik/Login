@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+    background: linear-gradient(320deg, red, blue);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-forum {
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0  auto;
+    background: rgba(255, 255, 255, 0);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.573);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+    width: 283px;
+    height: 360px;
+    overflow: visible;
+    padding-left: 50px;
+    padding-right: 0px;
+    cursor: pointer;
+}
+
+#moreData {
+    max-width: 100px;
+    box-sizing: border-box;
+}
+
+input {
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.148);
+    border-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 1;
+    transition-duration: 1s;
+}
+
+input:hover {
+    background-color: #ffffff70;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+.input-box{
+  position:relative;
+  width:200px;
+}
+
+.input-box input{
+  width:100%;
+  padding:10px;
+}
+
+.input-box label{
+  position:absolute;
+  left:10px;
+  top:10px;
+  transition: 0.3s;
+  background:rgba(79, 9, 9, 0);
+  padding:0 5px;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label{
+  top:-8px;
+  font-size:12px;
+  border-color: rgba(255, 255, 255, 0.292);
+}
+
+input:focus{
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.365);
+  color: white;
+}
+
+button {
+  padding-left: 95px;
+  padding-right: 95px;
+  border-radius: 25px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.432);
+  border-color: rgba(0, 0, 0, 0);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition-duration: 1s;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button:hover {
+  background-color: #ffffffac;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+
+label {
+  padding-right: 30px;
+  padding-left: 10px;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  transition-duration: 1s;
+}
+
+a:hover {
+  color: rgba(255, 255, 255, 0.201);
+  transition-duration: 1s;
+}
+
+h1 {
+  color: white;
+  padding-left: 80px;
+}
+
+p {
+  padding-left: 30px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.checkbox-container input {
+  display: none; /* originale Checkbox verstecken */
+  transition-duration: 1s;
+}
+
+.checkmark {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #ffffff27;
+  border-radius: 4px;
+  display: inline-block;
+  transition-duration: 1s;
+}
+
+.checkbox-container input:checked + .checkmark {
+  background-color: #ffffffab;
+  border-color: #ffffff00;
+  transition-duration: 1s;
+}
+
+.checkbox-container input:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+    </style>
+</head>
+<body>
+    <div id="login-forum">
+        <h1>Login</h1>
+        <form action="logedin.html">
+
+        <div class="input-box">
+            <input type="text" required>
+            <label>E-Mail<label>
+        </div>
+        <br>
+        <br>
+        <div class="input-box">
+            <input type="password" required>
+            <label>Password</label>
+        </div>
+        <br>
+        <br>
+        <label class="checkbox-container">
+            <input type="checkbox" id="remember">
+            <span class="checkmark"></span>
+            Remember me
+            <a href="password.html"><label class="moreData">Forgot password?</label></a>
+        </label>
+        <br>
+        <br>
+        <a href="logedin.html"><button>Login</button></a>
+        <br>
+        <br>
+        <p>Dont have an Account? <a href="register.html">Register</a></p>
+        </form>
+    </div>
+</body>
+</html>
